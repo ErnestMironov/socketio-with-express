@@ -1,16 +1,22 @@
 {
-  "name": "socketio-with-express",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.16.3",
-    "socket.io": "^2.1.1"
-  }
+	"name": "socketio-with-express",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node server"
+	},
+	"engines": {
+		"node": "19.x"
+	},
+	"keywords": [
+		"heroku"
+	],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"express": "^4.16.3",
+		"socket.io": "^4.5.4"
+	}
 }

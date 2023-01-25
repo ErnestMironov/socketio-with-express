@@ -15,6 +15,7 @@ function generateRandomNumber() {
 
 function onNewWebsocketConnection(socket) {
     console.info(`Socket ${socket.id} has connected.`);
+    console.log(socket.handshake.auth)
     onlineClients.add(socket.id);
 
     socket.on("disconnect", () => {
@@ -27,6 +28,8 @@ function onNewWebsocketConnection(socket) {
 
     // will send a message only to this socket (different than using `io.emit()`, which would broadcast it)
     socket.emit("welcome", `Welcome! You are visitor number ${nextVisitorNumber++}`);
+
+    socket.on("message", msg => { console.log(msg); });
 }
 
 function startServer() {
